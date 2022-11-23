@@ -29,32 +29,26 @@ As shown in the circuit diagram we need only 3 Arduino terminal pins, pin 8 is f
 ~~~
 #define m1 2
 #define m2 3
-#define m3 13
-int buttonState = 0;
 void setup()
 {
   pinMode(m1, OUTPUT);
   pinMode(m2, OUTPUT);
-  pinMode(m3, OUTPUT);
 }
 void loop()
 {
-  buttonState = digitalRead(13);
-  if (buttonState == HIGH){
-    digitalWrite(m1, HIGH);
+  digitalWrite(m1, HIGH);
   digitalWrite(m2, LOW);
-}
-else{
-  digitalWrite(m1, LOW);
-  digitalWrite(m2, HIGH);
- }
- delay(1000);
+  delay(10000);
 }
 
 ~~~
 
 ### OUTPUT
-![output](https://github.com/Praneet002/Experiment-no-7-DC-Motor-Speed-Control-Using-Arduino/blob/main/Screenshot%202022-05-20%20182701.png)
+### Before Simulation:
+![output](a2.png)
+
+### After Simulation:
+![output](b2.png)
 
 ### RESULTS 
 Thus to control the speed of DC motor using l293D board is completed successfully using Tinkercad software.
